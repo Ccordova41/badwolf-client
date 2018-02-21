@@ -42,8 +42,17 @@
 .navbar a {
   color: white;
   text-transform: uppercase;
-  letter-spacing: 0.5vh;
+  letter-spacing: 0.2vh;
   font-size: 2.25vh;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: red;
+
+}
+.actieve {
+  color: red;
 }
 
 /* Home */
@@ -93,7 +102,8 @@
 /* DoctorList */
 
 .doctors-list {
-  
+  margin-top: 3vh;
+  margin-bottom: 9vh; 
 }
 
 /* Footer */

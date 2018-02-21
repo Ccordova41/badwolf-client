@@ -8,17 +8,17 @@ const Navbar = () => {
       to="/"
       exact
       activeStyle={{
-        color: '#ffa700'
+        color: '#FFF'
       }}
-      > Home </NavLink> | 
+      > Home </NavLink> |
 
       <NavLink
-      to="/"
+      to="/doctors"
       exact
       activeStyle={{
-        color: '#ffa700'
+        color: '#FFF'
       }}
-      > Doctors</NavLink>
+      > Doctors</NavLink> |
 
 
 
