@@ -40,7 +40,7 @@
 .main-content-title {
   letter-spacing: 0.50vh;
   font-family: 'Bungee Shade', cursive;
-  margin-top: 100px;
+  margin-top: 60px;
   font-size: 5.5vh;
   -webkit-animation: colorchange 8s infinite alternate;
 }
@@ -63,11 +63,6 @@
     }
 
 }
-
-
-
-
-
 
 .main-content-body {
   margin-top: 50px;
