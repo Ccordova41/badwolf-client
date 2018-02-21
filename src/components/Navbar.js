@@ -8,7 +8,7 @@ const Navbar = () => {
       to="/"
       exact
       activeStyle={{
-        color: '#f88379'
+        color: '#ffa700'
       }}
       > Home </NavLink>
     </div>
