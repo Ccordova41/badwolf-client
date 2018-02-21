@@ -10,7 +10,20 @@ const Navbar = () => {
       activeStyle={{
         color: '#ffa700'
       }}
-      > Home </NavLink>
+      > Home </NavLink> | 
+
+      <NavLink
+      to="/"
+      exact
+      activeStyle={{
+        color: '#ffa700'
+      }}
+      > Doctors</NavLink>
+
+
+
+
+
     </div>
   )
 }
