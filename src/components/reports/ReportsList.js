@@ -16,12 +16,13 @@ class ReportsList extends Component {
     if (reports) {
       return(
         <div className="reports">
-          <ul>
+          <ul className="header">
             <li>
           {reports}
-          </li> 
+          </li>
             </ul>
         </div>
+
       )
     }
   }

@@ -124,16 +124,39 @@
   letter-spacing: 0.25vh;
 }
 
-
-
-
 /* reports */
-.reports ul {
-  list-style-type: none;
-  padding: 0;
 
-  color: red;
+.reports {
+  width: 300px;
+  height: 100px;
+  background-color: red;
+
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  margin-bottom: 50px; 
 }
+
+.header {
+      list-style-type: none;
+}
+
+/*.header {
+    color: black;
+    padding: 10px;
+    font-size: 2.25vh;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+}
+
+/*.header ul {
+  list-style-type: none;*/
+
+
+
 /* Footer */
 
 .footer {

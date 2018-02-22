@@ -15,7 +15,7 @@ class Report extends Component {
     return (
       <div>
         <li key={this.props.report.id}>
-          <span className="report">{this.props.report.name}</span>
+          Name: <span>{this.props.report.name}</span>
         </li>
       </div>
     )
