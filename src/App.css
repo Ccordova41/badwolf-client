@@ -51,7 +51,7 @@
   color: red;
 
 }
-.actieve {
+.active {
   color: red;
 }
 
@@ -128,8 +128,11 @@
 
 
 /* reports */
-.reports {
-  text-decoration: none;
+.reports ul {
+  list-style-type: none;
+  padding: 0;
+
+  color: red;
 }
 /* Footer */
 

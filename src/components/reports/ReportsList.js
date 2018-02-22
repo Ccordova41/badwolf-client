@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import Report from './Report'
 
 
@@ -17,8 +17,10 @@ class ReportsList extends Component {
       return(
         <div className="reports">
           <ul>
+            <li>
           {reports}
-          </ul>
+          </li> 
+            </ul>
         </div>
       )
     }
