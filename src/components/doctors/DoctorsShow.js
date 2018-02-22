@@ -25,7 +25,7 @@ function mapStateToProps(state, ownProps) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({  }, dispatch)
+  return bindActionCreators({ addToSelect }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(DoctorsShow)

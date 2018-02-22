@@ -10,3 +10,11 @@ export function fetchDoctors() {
     .catch(error => console.log(error));
   }
 }
+
+
+export const addToSelect = (selectDoctor) => {
+  return {
+    type: 'ADD_SELECT',
+    selectDoctor
+  }
+}
