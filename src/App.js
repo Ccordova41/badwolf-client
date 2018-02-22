@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchDoctors } from './actions/doctorsAction'
+import { fetchReports } from './actions/reportsAction'
 import DoctorsList from './components/doctors/DoctorsList';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
@@ -14,6 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchDoctors();
+    this.props.fetchReports();
   }
 
   render() {
@@ -36,7 +38,7 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchDoctors }, dispatch)
+  return bindActionCreators({ fetchDoctors, fetchReports }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(App)

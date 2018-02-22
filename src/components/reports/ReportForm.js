@@ -34,8 +34,9 @@ class ReportForm extends Component {
     return (
       <div className="reports-form">
         <form onSubmit={event => this.handleOnSubmit(event)}>
-          <label>Fill out the information below & create your characters card</label><br />
-          <input type ="text" value={this.state.name} onChange={event => this.handleOnChange(event)} />
+          <label>Fill out the information below & create your characters card</label><br /><br />
+          Name:
+          <input type ="text" name="Name" value={this.state.name} onChange={event => this.handleOnChange(event)} />
         </form>
       </div>
     )
@@ -43,7 +44,7 @@ class ReportForm extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addReport }), dispatch)
+  return bindActionCreators({ addReport }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(ReportForm)
