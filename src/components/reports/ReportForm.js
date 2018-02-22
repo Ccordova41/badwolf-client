@@ -41,3 +41,9 @@ class ReportForm extends Component {
     )
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addReport }), dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(ReportForm)
