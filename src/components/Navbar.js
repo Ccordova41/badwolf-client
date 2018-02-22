@@ -20,7 +20,13 @@ const Navbar = () => {
       }}
       > Doctors</NavLink> |
 
-
+      <NavLink
+      to="/reports"
+      exact
+      activeStyle={{
+        color: '#FFF'
+      }}
+      > Your Characters</NavLink> 
 
 
 
