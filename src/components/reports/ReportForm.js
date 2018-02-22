@@ -34,8 +34,8 @@ class ReportForm extends Component {
     return (
       <div className="reports-form">
         <form onSubmit={event => this.handleOnSubmit(event)}>
-        <div id="buttonId">
         <p> Fill out the information below & create your characters card</p> <br />
+        <div id="buttonId"> 
           <label>
           Name:
           <input type ="text" name="Name" value={this.state.name} onChange={event => this.handleOnChange(event)} />

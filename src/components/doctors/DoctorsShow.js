@@ -38,7 +38,7 @@ class DoctorsShow extends Component {
         <div className="reports-show">
         <ReportForm doctorId={this.props.doctor.id}/>
         <ReportsList doctorId={this.props.doctor.id}/>
-        <button onClick={this.handleOnClick}>Select this character!</button>
+        <button onClick={this.handleOnClick} className="myButton"><span>Save your character!</span></button>
 
       </div>
       </div>
