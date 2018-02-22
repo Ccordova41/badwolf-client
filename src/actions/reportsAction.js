@@ -26,7 +26,7 @@ export function addReport(report) {
 
 export const removeReport = (report) => {
   return {
-    type: 'REMOVE_COMMENT',
+    type: 'REMOVE_REPORT',
     report
   };
 };
