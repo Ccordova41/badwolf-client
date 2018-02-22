@@ -10,7 +10,7 @@ class DoctorsShow extends Component {
   handleOnClick = () => {
     const selectDoctor = {
       select: true,
-      doctorId: this.props.doctor.id
+      doctorId: this.props.doctor.id ,
     }
     this.props.addToSelect(selectDoctor);
   }
@@ -37,8 +37,9 @@ class DoctorsShow extends Component {
         </div>
         <div className="reports-show">
         <ReportForm doctorId={this.props.doctor.id}/>
-        <button onClick={this.handleOnClick}>Select this character!</button>
         <ReportsList doctorId={this.props.doctor.id}/>
+        <button onClick={this.handleOnClick}>Select this character!</button>
+
       </div>
       </div>
     )

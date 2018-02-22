@@ -25,18 +25,23 @@ class ReportForm extends Component {
       doctor_id: this.props.doctorId
     }
     this.props.addReport(report)
-    this.setState({
-      name: ''
-    })
+    document.getElementById("buttonId").style.visibility = "hidden";
   }
+
+
 
   render() {
     return (
       <div className="reports-form">
         <form onSubmit={event => this.handleOnSubmit(event)}>
-          <label>Fill out the information below & create your characters card</label><br /><br />
+        <div id="buttonId">
+        <p> Fill out the information below & create your characters card</p> <br />
+          <label>
           Name:
           <input type ="text" name="Name" value={this.state.name} onChange={event => this.handleOnChange(event)} />
+          </label>
+           <input type="submit" value="Submit" />
+           </div>
         </form>
       </div>
     )

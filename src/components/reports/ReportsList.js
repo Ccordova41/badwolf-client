@@ -17,7 +17,7 @@ class ReportsList extends Component {
       return(
         <div className="reports">
           <ul>
-            {reports}
+          {reports}
           </ul>
         </div>
       )
