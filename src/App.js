@@ -7,6 +7,7 @@ import DoctorsList from './components/doctors/DoctorsList';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SelectDoctors from './components/doctors/SelectDoctors'
 import './App.css';
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/doctors" component={DoctorsList} />
-              <Route path="/your-characters" component={ReportsList} />
+              <Route path="/reports" component={SelectDoctors} />
             </Switch>
           </div>
         </Router>
