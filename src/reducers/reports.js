@@ -1,4 +1,4 @@
-export default function reportsReducer(state = [], action) {
+export default (state = [], action) => {
   switch (action.type) {
     case 'FETCH_REPORTS':
       return state.concat(action.payload)

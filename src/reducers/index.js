@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import doctorsReducer from './doctorsReducer';
-import reportsReducer from './reportsReducer';
+import reports from './reports';
 import reportFormData from './reportFormData'
 
 const rootReducer = combineReducers({
   doctors: doctorsReducer,
-  reports: reportsReducer,
+  reports: reports,
   reportFormData: reportFormData,
 })
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../Reports.css'
 
-const Report = ({ report }) => (
+const ReportCard = ({ report }) => (
 
 
 <div key={report.id} className="ReportCard">
@@ -9,4 +9,4 @@ const Report = ({ report }) => (
 </div>
 )
 
-export default Report;
+export default ReportCard;
