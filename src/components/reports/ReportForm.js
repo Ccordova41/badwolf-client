@@ -25,6 +25,18 @@ class ReportForm extends Component {
   }
 
 
+    handlefirst_appearanceOnChange(event) {
+      this.setState({
+        first_appearance: event.target.value
+      })
+    }
+
+    handlelatest_appearanceOnChange(event) {
+      this.setState({
+        latest_appearance: event.target.value
+      })
+    }
+
     handlehome_planetOnChange(event) {
       this.setState({
         home_planet: event.target.value
@@ -34,14 +46,18 @@ class ReportForm extends Component {
   handleOnSubmit(event) {
     event.preventDefault();
     const report = {
-      name: this.state.name,
+      name: this.state.name.toUpperCase(),
       home_planet: this.state.home_planet,
+      first_appearance: this.state.first_appearance,
+      latest_appearance: this.state.latest_appearance,
       doctor_id: this.props.doctorId
     }
     this.props.createReport(report)
     this.setState({
       name: '',
-      home_planet: ''
+      home_planet: '',
+      first_appearance: '',
+      latest_appearance: ''
     })
   }
 
@@ -77,16 +93,16 @@ class ReportForm extends Component {
               <label htmlFor="first_appearance">First Appearance:</label>
               <input
                 type="text"
-                onChange={event => this.handleOnChange(event)}
+                onChange={event => this.handlefirst_appearanceOnChange(event)}
                 name="first_appearance"
                 value={this.state.first_appearance}
                 />
               </div>
               <div>
-                <label htmlFor="latest_appearance">latest Appearance:</label>
+                <label htmlFor="latest_appearance">Latest Appearance:</label>
                 <input
                   type="text"
-                  onChange={event => this.handleOnChange(event)}
+                  onChange={event => this.handlelatest_appearanceOnChange(event)}
                   name="latest_appearance"
                   value={this.state.latest_appearance}
                   />
