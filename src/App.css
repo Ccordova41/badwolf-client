@@ -66,7 +66,7 @@
   font-family: 'Bungee Shade', cursive;
   margin-top: 60px;
   font-size: 5.5vh;
-  -webkit-animation: colorchange 8s infinite alternate;
+  -webkit-animation: colorchange 5s infinite alternate;
 }
 
 @keyframes colorchange {

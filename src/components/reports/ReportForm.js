@@ -57,7 +57,7 @@ class ReportForm extends Component {
     return (
 
       <div>
-        <h2>Fill out all the awesome info you have on these characters!</h2> 
+        <h2>Fill out all the awesome info you have on these characters!</h2>
         <form onSubmit={event => this.handleOnSubmit(event)}>
           <div>
             <label htmlFor="name">Name:</label>
@@ -67,7 +67,7 @@ class ReportForm extends Component {
               name="name"
               value={this.state.name}
               />
-            </div>
+            </div> 
 
           <div>
             <label htmlFor="fact">Fact:</label>

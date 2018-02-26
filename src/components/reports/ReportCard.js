@@ -6,8 +6,8 @@ const ReportCard = ({ report }) => (
 
 <div key={report.id} className="ReportCard">
   <h3>{report.name}</h3>
-  <p>fact: {report.fact}</p>
-  <p>job: {report.job} </p>
+  <p>Fact: {report.fact}</p>
+  <p>Job: {report.job} </p>
 </div>
 )
 
