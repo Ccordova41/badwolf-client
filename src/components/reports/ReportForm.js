@@ -10,7 +10,10 @@ class ReportForm extends Component {
     super(props);
 
     this.state = {
-      name: ''
+      name: '',
+      home_planet: '',
+      first_appearance: '',
+      latest_appearance: ''
     }
   }
 
@@ -39,6 +42,8 @@ class ReportForm extends Component {
       <div>
         Add A form to the inventiry
         <form onSubmit={event => this.handleOnSubmit(event)}>
+
+
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -48,6 +53,19 @@ class ReportForm extends Component {
               value={this.state.name}
               />
             </div>
+
+            <div>
+              <label htmlFor="home_planet">Home Planet:</label>
+              <input
+                type="text"
+                onChange={event => this.handleOnChange(event)}
+                name="home_planet"
+                value={this.state.home_planet}
+                />
+              </div>
+
+
+
             <button type="submit"> Add Character!</button>
         </form>
       </div>

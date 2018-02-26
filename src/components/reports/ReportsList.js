@@ -17,7 +17,6 @@ class ReportsList extends Component {
         <div className="ReportsContainer">
           <h1> Characters</h1>
           {reports}
-
         </div>
       )
     }
