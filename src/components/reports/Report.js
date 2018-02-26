@@ -1,29 +1,12 @@
-import React, { Component } from 'react';
-import { removeReport } from '../../actions/reportsAction'
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React from 'react';
+import '../../Reports.css'
 
-class Report extends Component {
+const Report = ({ report }) => (
 
 
-  handleOnClick = () => {
-    this.props.removeReport(this.props.report)
-  }
+<div key={report.id} className="ReportCard">
+  <h3>{report.name}</h3>
+</div>
+)
 
-  render() {
-
-    return (
-      <div>
-        <li key={this.props.report.id}>
-          Name: <span>{this.props.report.name}</span>
-        </li>
-      </div>
-    )
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ removeReport }, dispatch)
-}
-
-export default connect(null, mapDispatchToProps)(Report);
+export default Report;

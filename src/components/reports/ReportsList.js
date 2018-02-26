@@ -1,38 +1,38 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
-import Report from './Report'
-
+import Report from './Report';
+import { getReports } from '../../actions/reportsAction';
 
 class ReportsList extends Component {
 
+  componentDidMount() {
+    this.props.getReports()
+  }
+
   render() {
 
-    const associatedReports = this.props.reportData.filter(report => report.doctor_id === this.props.doctorId)
+    const associatedReports = this.props.reports.filter(report => report.doctor_id === this.props.doctorId)
     const reports = associatedReports.map((report) => {
-      return <Report report={report}/>
+      return <Report key={report.id} report={report}/>
     })
 
     if (reports) {
       return(
+        <div>
         <div className="reports">
-          <ul className="header">
-            <li>
-          {reports}
-          </li>
-            </ul>
+        <h1> Reports</h1>
+        {this.props.reports.map(report => <Report key={report.id} report={report} /> )}
         </div>
-
+        </div>
       )
-    }
   }
-
+}
 }
 
 function mapStateToProps(state) {
   return {
-    reportData: state.reports
+    reports: state.reports
   }
 }
 
-export default connect(mapStateToProps)(ReportsList)
+export default connect(mapStateToProps, { getReports })(ReportsList);

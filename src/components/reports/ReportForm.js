@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addReport } from '../../actions/reportsAction'
+import { createReport } from '../../actions/reportsAction';
+
 
 class ReportForm extends Component {
+
   constructor(props) {
     super(props);
 
@@ -11,6 +13,7 @@ class ReportForm extends Component {
       name: ''
     }
   }
+
 
   handleOnChange(event) {
     this.setState({
@@ -24,32 +27,37 @@ class ReportForm extends Component {
       name: this.state.name,
       doctor_id: this.props.doctorId
     }
-    this.props.addReport(report)
-    document.getElementById("buttonId").style.visibility = "hidden";
+    this.props.createReport(report)
+    this.setState({
+      name: ''
+    })
   }
-
-
 
   render() {
     return (
-      <div className="reports-form">
+
+      <div>
+        Add A form to the inventiry
         <form onSubmit={event => this.handleOnSubmit(event)}>
-          <div id="buttonId">
-        <p> Fill out the information below & create your characters card</p> <br />
-          <label>
-          Name:
-          <input type ="text" name="Name" value={this.state.name} onChange={event => this.handleOnChange(event)} />
-          </label>
-           <input type="submit" value="Submit" />
-           </div>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              onChange={event => this.handleOnChange(event)}
+              name="name"
+              value={this.state.name}
+              />
+            </div>
+            <button type="submit"> Add Character!</button>
         </form>
       </div>
+
     )
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addReport }, dispatch)
+  return bindActionCreators({ createReport }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(ReportForm)

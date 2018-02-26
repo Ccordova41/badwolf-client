@@ -3,10 +3,9 @@ export default function reportsReducer(state = [], action) {
     case 'FETCH_REPORTS':
       return state.concat(action.payload)
     case 'ADD_REPORT':
-      return state.concat(action.payload)
-    case 'REMOVE_REPORT':
-      let reports = state.filter(report => report.id !== action.report.id)
-      return reports
+      return state.concat(action.report)
+      case 'GET_REPORTS_SUCCESS':
+    return action.reports;
     default:
       return state;
   }

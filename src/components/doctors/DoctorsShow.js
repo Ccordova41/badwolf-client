@@ -10,7 +10,7 @@ class DoctorsShow extends Component {
   handleOnClick = () => {
     const selectDoctor = {
       select: true,
-      doctorId: this.props.doctor.id ,
+      doctorId: this.props.doctor.id 
     }
     this.props.addToSelect(selectDoctor);
   }
