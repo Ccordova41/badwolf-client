@@ -15,7 +15,6 @@ class ReportsList extends Component {
     if (reports) {
       return(
         <div className="ReportsContainer">
-          <h1> Characters</h1>
           {reports}
         </div>
       )

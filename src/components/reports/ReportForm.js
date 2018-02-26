@@ -11,9 +11,8 @@ class ReportForm extends Component {
 
     this.state = {
       name: '',
-      home_planet: '',
-      first_appearance: '',
-      latest_appearance: ''
+      fact: '',
+      job: ''
     }
   }
 
@@ -25,39 +24,32 @@ class ReportForm extends Component {
   }
 
 
-    handlefirst_appearanceOnChange(event) {
+    handlefactOnChange(event) {
       this.setState({
-        first_appearance: event.target.value
+        fact: event.target.value
       })
     }
 
-    handlelatest_appearanceOnChange(event) {
+    handlejobOnChange(event) {
       this.setState({
-        latest_appearance: event.target.value
+        job: event.target.value
       })
     }
 
-    handlehome_planetOnChange(event) {
-      this.setState({
-        home_planet: event.target.value
-      })
-    }
 
   handleOnSubmit(event) {
     event.preventDefault();
     const report = {
       name: this.state.name.toUpperCase(),
-      home_planet: this.state.home_planet,
-      first_appearance: this.state.first_appearance,
-      latest_appearance: this.state.latest_appearance,
+      fact: this.state.fact,
+      job: this.state.job,
       doctor_id: this.props.doctorId
     }
     this.props.createReport(report)
     this.setState({
       name: '',
-      home_planet: '',
-      first_appearance: '',
-      latest_appearance: ''
+      fact: '',
+      job: ''
     })
   }
 
@@ -65,10 +57,8 @@ class ReportForm extends Component {
     return (
 
       <div>
-        Add A form to the inventiry
+        <h2>Fill out all the awesome info you have on these characters!</h2> 
         <form onSubmit={event => this.handleOnSubmit(event)}>
-
-
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -80,35 +70,25 @@ class ReportForm extends Component {
             </div>
 
           <div>
-            <label htmlFor="home_planet">Home Planet:</label>
+            <label htmlFor="fact">Fact:</label>
             <input
               type="text"
-                onChange={event => this.handlehome_planetOnChange(event)}
-              name="home_planet"
-              value={this.state.home_planet}
+              onChange={event => this.handlefactOnChange(event)}
+              name="fact"
+              value={this.state.fact}
               />
             </div>
 
             <div>
-              <label htmlFor="first_appearance">First Appearance:</label>
+              <label htmlFor="job">Job:</label>
               <input
                 type="text"
-                onChange={event => this.handlefirst_appearanceOnChange(event)}
-                name="first_appearance"
-                value={this.state.first_appearance}
+                onChange={event => this.handlejobOnChange(event)}
+                name="job"
+                value={this.state.job}
                 />
               </div>
-              <div>
-                <label htmlFor="latest_appearance">Latest Appearance:</label>
-                <input
-                  type="text"
-                  onChange={event => this.handlelatest_appearanceOnChange(event)}
-                  name="latest_appearance"
-                  value={this.state.latest_appearance}
-                  />
-                </div>
-
-            <button type="submit"> Add Character!</button>
+            <button type="submit">Alons-y!</button>
         </form>
       </div>
 
