@@ -26,7 +26,7 @@ const Navbar = () => {
       activeStyle={{
         color: '#FFF'
       }}
-      > Your Characters</NavLink>
+      > Your Characters</NavLink> |
 
       <NavLink
       to="/contact"
