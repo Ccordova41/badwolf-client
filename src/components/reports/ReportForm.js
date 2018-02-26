@@ -18,21 +18,30 @@ class ReportForm extends Component {
   }
 
 
-  handleOnChange(event) {
+  handleNameOnChange(event) {
     this.setState({
       name: event.target.value
     })
   }
 
+
+    handlehome_planetOnChange(event) {
+      this.setState({
+        home_planet: event.target.value
+      })
+    }
+
   handleOnSubmit(event) {
     event.preventDefault();
     const report = {
       name: this.state.name,
+      home_planet: this.state.home_planet,
       doctor_id: this.props.doctorId
     }
     this.props.createReport(report)
     this.setState({
-      name: ''
+      name: '',
+      home_planet: ''
     })
   }
 
@@ -48,7 +57,7 @@ class ReportForm extends Component {
             <label htmlFor="name">Name:</label>
             <input
               type="text"
-              onChange={event => this.handleOnChange(event)}
+              onChange={event => this.handleNameOnChange(event)}
               name="name"
               value={this.state.name}
               />
@@ -58,7 +67,7 @@ class ReportForm extends Component {
             <label htmlFor="home_planet">Home Planet:</label>
             <input
               type="text"
-                onChange={event => this.handleOnChange(event)}
+                onChange={event => this.handlehome_planetOnChange(event)}
               name="home_planet"
               value={this.state.home_planet}
               />
