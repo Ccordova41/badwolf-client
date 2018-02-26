@@ -26,10 +26,15 @@ const Navbar = () => {
       activeStyle={{
         color: '#FFF'
       }}
-      > Your Characters</NavLink> 
+      > Your Characters</NavLink>
 
-
-
+      <NavLink
+      to="/contact"
+      exact
+      activeStyle={{
+        color: '#FFF'
+      }}
+      > Contact</NavLink>
     </div>
   )
 }
