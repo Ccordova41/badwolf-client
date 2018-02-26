@@ -1,5 +1,8 @@
 const initialState = {
-  name: ''
+  name: '',
+  home_planet: '',
+  first_appearance: '',
+  latest_appearance: ''
 }
 
 export default (state = initialState, action) => {

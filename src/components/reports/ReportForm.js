@@ -54,17 +54,34 @@ class ReportForm extends Component {
               />
             </div>
 
+          <div>
+            <label htmlFor="home_planet">Home Planet:</label>
+            <input
+              type="text"
+                onChange={event => this.handleOnChange(event)}
+              name="home_planet"
+              value={this.state.home_planet}
+              />
+            </div>
+
             <div>
-              <label htmlFor="home_planet">Home Planet:</label>
+              <label htmlFor="first_appearance">First Appearance:</label>
               <input
                 type="text"
                 onChange={event => this.handleOnChange(event)}
-                name="home_planet"
-                value={this.state.home_planet}
+                name="first_appearance"
+                value={this.state.first_appearance}
                 />
               </div>
-
-
+              <div>
+                <label htmlFor="latest_appearance">latest Appearance:</label>
+                <input
+                  type="text"
+                  onChange={event => this.handleOnChange(event)}
+                  name="latest_appearance"
+                  value={this.state.latest_appearance}
+                  />
+                </div>
 
             <button type="submit"> Add Character!</button>
         </form>
