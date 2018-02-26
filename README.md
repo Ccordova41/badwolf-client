@@ -1,10 +1,10 @@
 # Doctor Who Universe!!
 
-##Description
+## Description
 Need more Doctor Who in your life?! Well, you got it here!
 Sourced by Giphy
 
- ##Start App
+ ## Start App
 
  Please clone this app, as well as the API repository for the app, which can be found at: [https://github.com/Ccordova41/doctor-who-app-api]
 
@@ -12,7 +12,7 @@ Sourced by Giphy
 
  The client side of the app will run with `yarn install && yarn start` or `npm install && start`.
 
- ##License
+ ## License
 
  Copyright 2018 Catherine Cordova. Full license available at [https://github.com/Ccordova41/doctor-who-app-client/LICENSE]  
 
