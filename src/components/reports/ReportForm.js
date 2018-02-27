@@ -46,6 +46,7 @@ class ReportForm extends Component {
       doctor_id: this.props.doctorId
     }
     this.props.createReport(report)
+    //blog post on how you add createReport to the props of this component
     this.setState({
       name: '',
       fact: '',
@@ -67,7 +68,7 @@ class ReportForm extends Component {
               name="name"
               value={this.state.name}
               />
-            </div> 
+            </div>
 
           <div>
             <label htmlFor="fact">Fact:</label>
