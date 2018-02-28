@@ -3,28 +3,28 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ReportForm from '../reports/ReportForm';
 import ReportsList from '../reports/ReportsList';
-import { addToSelect } from '../../actions/doctorsAction'
+import { addToSelect } from '../../actions/selectdoctorsAction'
 
 class DoctorsShow extends Component {
 
-  handleOnClick = () => {
+  constructor(props) {
+    super(props);
+      this.state = {
+        select: false,
+        doctorId: '',
+        doctorslug: ''
+      }
+  }
+
+
+  handleOnClick = (event) => {
+    event.preventDefault();
     const selectDoctor = {
       select: true,
-      doctorId: this.props.doctor.id 
+      doctorId: this.props.doctor.id,
+      doctorslug: this.props.doctor.slug,
     }
     this.props.addToSelect(selectDoctor);
-  }
-
-  onUnload = (event) => {
-    event.returnValue = "Please don't reload!"
-  }
-
-  componentDidMount = () => {
-    window.addEventListener("beforeunload", this.onUnload)
-  }
-
-  componentWillUnmount = () => {
-    window.removeEventListener("beforeunload", this.onUnload)
   }
 
 

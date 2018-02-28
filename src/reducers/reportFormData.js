@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case 'UPDATED_DATA':
       return action.reportFormData;
 
-    case 'RESET_SURFBOARD_FORM':
+    case 'RESET_REPORT_FORM':
       return initialState;
 
     default:

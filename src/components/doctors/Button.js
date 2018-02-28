@@ -1,28 +1,17 @@
-import React, { Component } from 'react';
+import React from "react";
+import {ButtonChild} from "./ButtonChild";
 
-class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicks: 0,
+class Button extends React.Component {
 
+    render() {
+        return (
+          <div className="button">
+              <ButtonChild
+                  initialLike={0}
+              />
+          </div>
+        );
     }
-  }
-
-  IncreaseNumber = () => {
-    this.setState({ clicks: this.state.clicks + 1});
-  }
-
-  render() {
-      return (
-        <div>
-          <button onClick={this.IncreaseNumber}>Like!</button>
-          { this.state.clicks}
-        </div>
-      )
-
-
-  }
 }
 
 export default Button;

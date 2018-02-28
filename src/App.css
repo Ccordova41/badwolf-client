@@ -106,6 +106,9 @@
   margin-bottom: 9vh;
 }
 
+.doctor-button {
+  padding: 10px; 
+}
 
 /* selected doctor */
 .myButton {
