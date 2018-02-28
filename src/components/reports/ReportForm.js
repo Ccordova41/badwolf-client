@@ -43,15 +43,11 @@ class ReportForm extends Component {
       name: this.state.name.toUpperCase(),
       fact: this.state.fact,
       job: this.state.job,
-      doctor_id: this.props.doctorId
+      doctor_id: this.props.doctorId,
+      doctor_url: this.props.doctorURL
     }
     this.props.createReport(report)
     //blog post on how you add createReport to the props of this component
-    this.setState({
-      name: '',
-      fact: '',
-      job: ''
-    })
   }
 
   render() {

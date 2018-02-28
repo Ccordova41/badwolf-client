@@ -1,8 +1,7 @@
 const initialState = {
   name: '',
-  home_planet: '',
-  first_appearance: '',
-  latest_appearance: ''
+  fact: '',
+  job: ''
 }
 
 export default (state = initialState, action) => {

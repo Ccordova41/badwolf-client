@@ -1,10 +1,11 @@
 import React from "react";
+import { connect } from 'react-redux';
 
 export class ButtonChild extends React.Component {
-    constructor(props) {
+    constructor() {
         super();
         this.state = {
-            like: props.initialLike
+            like: 0
         };
     }
 

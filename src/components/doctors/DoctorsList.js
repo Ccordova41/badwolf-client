@@ -21,6 +21,7 @@ const DoctorsList = ({ match, doctorData }) => {
   )
 }
 
+
 function mapStateToProps(state) {
   return {
     doctorData: state.doctors

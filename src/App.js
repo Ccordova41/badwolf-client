@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { fetchDoctors } from './actions/doctorsAction'
 import { getReports } from './actions/reportsAction'
-
 import DoctorsList from './components/doctors/DoctorsList';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
@@ -31,7 +30,6 @@ class App extends Component {
               <Route path="/doctors" component={DoctorsList} />
               <Route path="/reports" component={SelectDoctors} />
               <Route path="/contact" component={Contact} />
-
             </Switch>
           </div>
         </Router>

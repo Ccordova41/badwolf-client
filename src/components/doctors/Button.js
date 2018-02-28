@@ -6,9 +6,7 @@ class Button extends React.Component {
     render() {
         return (
           <div className="button">
-              <ButtonChild
-                  initialLike={0}
-              />
+              <ButtonChild />
           </div>
         );
     }
