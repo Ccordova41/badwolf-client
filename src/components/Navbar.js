@@ -21,7 +21,7 @@ const Navbar = () => {
       > Doctors</NavLink> |
 
       <NavLink
-      to="/reports"
+      to="/characters"
       exact
       activeStyle={{
         color: '#FFF'

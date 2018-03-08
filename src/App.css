@@ -107,7 +107,7 @@
 }
 
 .doctor-button {
-  padding: 10px; 
+  padding: 10px;
 }
 
 /* selected doctor */
@@ -125,6 +125,10 @@
   border-radius: 100px;
   font-family: 'Bungee Shade', cursive;
   letter-spacing: 0.25vh;
+}
+
+.select-doctors {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* reports */

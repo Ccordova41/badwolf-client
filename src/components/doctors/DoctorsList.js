@@ -24,7 +24,7 @@ const DoctorsList = ({ match, doctorData }) => {
 
 function mapStateToProps(state) {
   return {
-    doctorData: state.doctors
+    doctorData: state.doctors.reverse().slice(0, 9)
   }
 }
 

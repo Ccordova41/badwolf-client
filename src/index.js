@@ -7,17 +7,28 @@ import rootReducer from './reducers'
 import './Reports.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { loadState,saveState } from './localStorage'
 
-const store = createStore(rootReducer,
+const persistedState = loadState();
+
+const store = createStore(
+  rootReducer,
+  persistedState,
   compose(
   applyMiddleware(thunk),
   window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 )
 
+store.subscribe(() => {
+  saveState({
+    doctors: store.getState().doctors
+  });
+});
+
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+      <App />
   </Provider>,
   document.getElementById('root'));
 registerServiceWorker();
