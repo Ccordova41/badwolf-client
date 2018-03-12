@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import ReportForm from '../reports/ReportForm';
+import ReportsList from '../reports/ReportsList';
 import { addToSelect } from '../../actions/selectAction'
 
 class DoctorsShow extends Component {
@@ -31,7 +33,14 @@ class DoctorsShow extends Component {
         <div className="doctor-gif">
           <img src={this.props.doctor.images.fixed_height.url} /><br />
           <button onClick={this.handleOnClick} className="myButton"><span>Save your character!</span></button>
+          </div>
+
+          <div className="reports-show">
+          <ReportForm doctorId={this.props.doctor.id}/>
+          <ReportsList doctorId={this.props.doctor.id}/>
+
         </div>
+
       </div>
     )}
   }
