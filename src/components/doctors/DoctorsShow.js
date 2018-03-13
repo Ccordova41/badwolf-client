@@ -18,7 +18,7 @@ class DoctorsShow extends Component {
     }
     const c = this.props.selectedDoctors.filter(doctor => doctor.slug === this.props.doctor.slug)
 
-    if (c.length == 0 ) {
+    if (c.length === 0 ) {
       this.props.addToSelect(selectDoctor);
     } else {
       alert('Hey! You have already saved this :)')
@@ -31,7 +31,7 @@ class DoctorsShow extends Component {
       <div className="doctors-show">
         <h3>Doctor Who</h3>
         <div className="doctor-gif">
-          <img src={this.props.doctor.images.fixed_height.url} /><br />
+          <img src={this.props.doctor.images.fixed_height.url} alt="Doctor Who"/><br />
           <button onClick={this.handleOnClick} className="myButton"><span>Save your character!</span></button>
           </div>
 
@@ -47,7 +47,7 @@ class DoctorsShow extends Component {
 
 
 function mapStateToProps(state, ownProps) {
-  const selectedDoctors = state.doctors.filter(doctor => doctor.select == true)
+  const selectedDoctors = state.doctors.filter(doctor => doctor.select === true)
   const doctor = state.doctors.find(doctor => doctor.id === ownProps.match.params.doctorId)
   return { doctor, selectedDoctors }
 }

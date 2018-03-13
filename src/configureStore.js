@@ -16,7 +16,6 @@ const configureStore = () => {
     )
   )
 
-  //save state anytime storestate changes
   store.subscribe(() => {
     saveState({
       doctors: store.getState().doctors

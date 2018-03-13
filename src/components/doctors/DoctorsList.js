@@ -10,7 +10,6 @@ const DoctorsList = ({ match, doctorData }) => {
       <Link key={doctor.id} to={`/doctors/${doctor.id}`}><img key={index} src={doctor.images.fixed_height.url} alt={doctor.title} /></Link>
       <Button />
     </div>
-
   )
 
   return (
