@@ -8,7 +8,7 @@ const DoctorsList = ({ match, doctorData }) => {
   const renderDoctors = doctorData.map((doctor, index) =>
     <div>
       <Link key={doctor.id} to={`/doctors/${doctor.id}`}><img key={index} src={doctor.images.fixed_height.url} alt={doctor.title} /></Link>
-      <Button />
+
     </div>
 
   )
