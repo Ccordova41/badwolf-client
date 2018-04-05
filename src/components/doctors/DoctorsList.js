@@ -2,12 +2,12 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import DoctorsShow from './DoctorsShow';
-import Button from './Button';
+import Button from '../likes/Button';
 
-const DoctorsList = ({ match, doctorData }) => {
+const DoctorsList = ({ match, doctorData, report }) => {
   const renderDoctors = doctorData.map((doctor, index) =>
     <div>
-      <Link key={doctor.id} to={`/doctors/${doctor.id}`}><img key={index} src={doctor.images.fixed_height.url} alt={doctor.title} /></Link>
+      <Link key={doctor.id} to={`/doctors/${doctor.id}`}><img  src={doctor.images.fixed_height.url} alt={doctor.title} /></Link>
       <Button />
     </div>
   )

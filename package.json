@@ -8,6 +8,7 @@
     "react-beforeunload": "^1.0.4",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
+    "react-redux-provide": "^7.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",

@@ -4,3 +4,9 @@ export const addToSelect = (selectDoctor) => {
     selectDoctor
   }
 }
+
+export const onIncrement = () => {
+  return {
+    type: 'INCREMENT'
+  }
+}

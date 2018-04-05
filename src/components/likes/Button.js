@@ -4,21 +4,11 @@ import ButtonChild from "./ButtonChild";
 const API_URL = process.env.REACT_APP_API_URL;
 
 class Button extends Component {
-  state = {
-    like: 0
-  }
-
-
-  changeLike = () => {
-    this.setState({
-      like: this.state.like + 1
-    })
-  }
 
 
   callApi = () => {
     console.log('a')
-    fetch(`${API_URL}/doctors`)
+    fetch(`${API_URL}/doctorslijpdo`)
       .then(res => {
         if(res.status !== 200) {
           throw new Error(res.statusText)
@@ -32,7 +22,6 @@ class Button extends Component {
       })
       .catch(error => console.log('d', error));
       console.log('e')
-
       // a b c + data e
     }
 
@@ -40,10 +29,14 @@ class Button extends Component {
   render() {
     return (
     <div className="likes-count">
-      <ButtonChild increaseLike={this.changeLike} like={this.state.like}/>
+      <ButtonChild />
       <button onClick={this.callApi}>Call Api</button>
     </div>
     );
   }
 }
 export default Button;
+
+// CLick button -> action to updateLike
+// updateLike => disptach(updatingLikeCount)
+  // fetch(model) => API update Like Count

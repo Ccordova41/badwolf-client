@@ -7,7 +7,6 @@ export default function doctorsReducer(state = [], action) {
       let selectDoctor = state.filter(doctor => doctor.id === action.selectDoctor.doctorId)[0]
       let updatedDoctor = Object.assign({}, selectDoctor, { select: action.selectDoctor.select })
       return state.map(doctor => doctor.id === selectDoctor.id ? updatedDoctor : doctor)
-
     default:
       return state;
   }

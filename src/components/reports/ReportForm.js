@@ -46,7 +46,6 @@ class ReportForm extends Component {
       doctor_id: this.props.doctorId
     }
     this.props.createReport(report)
-    //blog post on how you add createReport to the props of this component
     this.setState({
       name: '',
       fact: '',
