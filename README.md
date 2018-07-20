@@ -1,4 +1,4 @@
-# Doctor Who Universe!!
+# BadWolf
 
 ## Description
 Need more Doctor Who in your life?! Well, you got it here!
@@ -6,7 +6,7 @@ Sourced by Giphy
 
  ## Start App
 
- Please clone this app, as well as the API repository for the app, which can be found at: [https://github.com/Ccordova41/doctor-who-app-api]
+ Please clone this app, as well as the API repository for the app, which can be found at: [https://github.com/Ccordova41/badwolf-api]
 
  Please run the API with `rails s -p 3001`. Otherwise, it will not run.
 
